@@ -14,10 +14,22 @@
 - **Upstream repo:** <https://github.com/christhealien/blake2b-asic-control>
 - **Wrapper repo:** <https://github.com/christhealien/blake2b-asic-control-startos>
 
+## Screenshots
+
+StartOS's service listing has no screenshot gallery, so they're here. Test miners on 127.0.0.x and example pools; the tuner results are from a real SC Lite run.
+
+![Fleet: every miner, its 24-hour hashrate graph, presets and best share](https://raw.githubusercontent.com/christhealien/blake2b-asic-control/master/blake2b-asic-control/gallery/1.png)
+![Auto-tuner: chip map of a failed step, the presets it built, and the finished tests](https://raw.githubusercontent.com/christhealien/blake2b-asic-control/master/blake2b-asic-control/gallery/2.png)
+![Miner page: live values, the 24-hour hashrate graph and the chip map](https://raw.githubusercontent.com/christhealien/blake2b-asic-control/master/blake2b-asic-control/gallery/3.png)
+![Schedule: a week of presets in half-hour blocks](https://raw.githubusercontent.com/christhealien/blake2b-asic-control/master/blake2b-asic-control/gallery/4.png)
+![Presets with their own fan curves, and the fan curve editor](https://raw.githubusercontent.com/christhealien/blake2b-asic-control/master/blake2b-asic-control/gallery/5.png)
+![Notifications on Telegram or Discord](https://raw.githubusercontent.com/christhealien/blake2b-asic-control/master/blake2b-asic-control/gallery/6.png)
+
 ---
 
 ## Table of Contents
 
+- [Screenshots](#screenshots)
 - [Image and Container Runtime](#image-and-container-runtime)
 - [Volume and Data Layout](#volume-and-data-layout)
 - [File Models](#file-models)

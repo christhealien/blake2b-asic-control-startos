@@ -27,7 +27,7 @@ Your miners must be on a network your StartOS server can reach. Keep them on a t
 - **Profiles:** presets (clock, voltage, PV and their own fan curve), the shared fan curves, and **Download report**: a read-only zip, with nothing private in it, to send in when you have a model or firmware the app hasn't been tested on.
 - **Schedule:** paint a week of presets in half-hour blocks, add scheduled restarts, and copy one miner's week to others.
 - **Tuner** (SC Lite): maps every clock from underclock to overclock, finds the lowest clean voltage at each, and builds High, Middle, Low and Lowest-power presets.
-- **Settings:** miners, notifications (Telegram or Discord), time zone, and **Account** to change your username or password.
+- **Settings:** miners, notifications (Telegram or Discord), time zone, **Best share numbers** (on the same scale as DATUM and mempool, the miner's own numbers, or both), and **Account** to change your username or password.
 
 To replace a lost password, stop the service, run **Set Login Password** again (everyone is signed out), and start it.
 
