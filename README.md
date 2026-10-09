@@ -60,7 +60,7 @@ One image, the same one the upstream Umbrel app runs, built by the upstream repo
 | ------------ | ---------------------------------------------- |
 | `app-sub`    | The `primary` daemon — the one to `attach` to  |
 
-The entrypoint starts the dashboard (`server.py`, port 8787) and a small widget server that only the Umbrel app uses (not exposed here). On stop, it first stops any running tuning run so that run puts the miner back on its best tested setting; that can take up to 30 s, so the daemon's `sigtermTimeout` is 60 s.
+The entrypoint starts the dashboard (`server.py`, port 8787) and a small widget server that only the Umbrel app uses (not exposed here). On stop, it first stops any running tuning run so that run puts the miner's setting back; the entrypoint waits up to 110 s for that (a slow miner can take a while), so the daemon's `sigtermTimeout` is 120 s. If the dashboard itself crashes, the entrypoint stops the runs the same way before the service exits.
 
 Environment set by the package: `SCLITE_WEBUI_HOST=0.0.0.0`, `SCLITE_WEBUI_PORT=8787`, `SCLITE_WEBUI_MINERS=/data/miners.json`, `SCLITE_TUNER_DATA=/data/tuner`, `B2AC_PLATFORM=startos` (shows the StartOS sign-in hint), `TZ=UTC` (the starting time zone; the app has its own Settings → Time zone, saved in `miners.json`).
 

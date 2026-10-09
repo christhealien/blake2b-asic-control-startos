@@ -38,8 +38,8 @@ export const main = sdk.setupMain(async ({ effects }) => {
           B2AC_PLATFORM: 'startos',
           TZ: 'UTC',
         },
-        // on stop, a running tuning run puts the miner back on its best setting first (up to 30 s)
-        sigtermTimeout: 60_000,
+        // on stop, each running tuning run puts the miner's setting back first (the entrypoint waits up to 110 s)
+        sigtermTimeout: 120_000,
       },
       ready: {
         display: i18n('Web Interface'),
