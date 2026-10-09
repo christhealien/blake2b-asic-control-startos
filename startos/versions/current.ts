@@ -1,10 +1,10 @@
 import { IMPOSSIBLE, VersionInfo } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '1.15.9:0',
+  version: '1.16.0:0',
   releaseNotes: {
     en_US:
-      'Blake2b ASIC Control 1.15.9: efficiency is now shown in J/TH (the same number as W/TH). From 1.15.8: auto fan control now leaves SC Box and HS Box miners to their own firmware fan control (their fan settings do not hold, and each write set off a long fan spike). The rest of this release redesigns the Umbrel home-screen widgets, which StartOS does not use.',
+      'Blake2b ASIC Control 1.16.0: a fan target for the SC Box and HS Box. Their firmware ignores fan numbers and holds the control board at a target temperature; the Miner page now sets that target for these two models only (SC Box 65-75 C, HS Box 70-80 C), writing nothing else. Lower is cooler and louder, higher is quieter and warmer.',
   },
   migrations: {
     up: async ({ effects }) => {},

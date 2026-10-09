@@ -9,7 +9,7 @@
 > here, the upstream documentation is accurate and fully applicable — see the
 > Documentation section of `instructions.md` for links.
 
-[Blake2b ASIC Control](https://github.com/christhealien/blake2b-asic-control) is a local dashboard for Blake2b ASIC miners (SC Lite, SC Box, HS Box and others): a fleet view, one-click presets (clock, voltage and fan curve), a weekly schedule, Telegram and Discord alerts, best-share and rejected-share tracking, 24-hour hashrate graphs, a per-chip map, a read-only miner report for models it hasn't been tested on, and a per-chip auto-tuner for the SC Lite. It talks to the miners only through their own web API and port 4028.
+[Blake2b ASIC Control](https://github.com/christhealien/blake2b-asic-control) is a local dashboard for Blake2b ASIC miners (SC Lite, SC Box, HS Box and others): a fleet view, one-click presets (clock, voltage and fan curve), a weekly schedule, Telegram and Discord alerts, best-share and rejected-share tracking, 24-hour hashrate graphs, a per-chip map, a read-only miner report for models it hasn't been tested on, a per-chip auto-tuner for the SC Lite, and the fan target the SC Box and HS Box firmware's own fan loop holds. It talks to the miners only through their own web API and port 4028.
 
 - **Upstream repo:** <https://github.com/christhealien/blake2b-asic-control>
 - **Wrapper repo:** <https://github.com/christhealien/blake2b-asic-control-startos>
