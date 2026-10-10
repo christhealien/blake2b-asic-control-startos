@@ -9,10 +9,30 @@
 > here, the upstream documentation is accurate and fully applicable — see the
 > Documentation section of `instructions.md` for links.
 
-[Blake2b ASIC Control](https://github.com/christhealien/blake2b-asic-control) is a local dashboard for Blake2b ASIC miners (SC Lite, SC Box, HS Box and others): a fleet view, one-click presets (clock, voltage and fan curve), a weekly schedule, Telegram and Discord alerts, best-share and rejected-share tracking, 24-hour hashrate graphs, a per-chip map, a read-only miner report for models it hasn't been tested on, a per-chip auto-tuner for the SC Lite, and the fan target the SC Box and HS Box firmware's own fan loop holds. It talks to the miners only through their own web API and port 4028.
+[Blake2b ASIC Control](https://github.com/christhealien/blake2b-asic-control) is a local dashboard for Blake2b ASIC miners (SC Lite, SC Box, HS Box and others): a fleet view, one-click presets (clock, voltage and fan curve), a weekly schedule, Telegram and Discord alerts, best-share and rejected-share tracking, 24-hour hashrate graphs, a per-chip map, a read-only miner report for models it hasn't been tested on, a per-chip auto-tuner for the SC Lite, and for the SC Box and HS Box clock presets, a clock control, a clock tuner and the fan target their firmware's own fan loop holds. It talks to the miners only through their own web API and port 4028.
 
 - **Upstream repo:** <https://github.com/christhealien/blake2b-asic-control>
 - **Wrapper repo:** <https://github.com/christhealien/blake2b-asic-control-startos>
+
+## Supported Miners
+
+What each model can do in this version (the same as upstream; its README's Models section has the details).
+Monitoring means the Fleet card and Miner page: hashrate and the 24-hour graph, temperatures, fans, chips,
+pools, restarts, best share, rejected shares, alerts.
+
+| Model | Tested | Monitoring | Clock and voltage (presets, scheduled presets) | Fans | Tuner |
+| ----- | ------ | ---------- | ---------------------------------------------- | ---- | ----- |
+| **SC Lite** | ✓ fw 2.2.0 | ✓ | ✓ clock, voltage and PV, plus Idle | app fan curves and fan % | ✓ clock and voltage |
+| **SC Box** | ✓ fw 2.2.5 | ✓ | **clock only** (voltage kept as the miner has it) | **fan target** 65–75 °C | **clock tuner** (new in 1.17) |
+| **HS Box** | ✓ fw 2.2.6 | ✓ | **clock only** (voltage kept as the miner has it) | **fan target** 70–80 °C | **clock tuner** (new in 1.17) |
+| **SC Box II** | not yet | expected ✓ | expected clock only | expected fan target | expected clock tuner |
+| **SC5 Pro II** | probe, from a capture | ✓ | same format as the SC Lite, untested | app fan curves, untested | only with "allow untested models" |
+| **SC5 Pro** | not yet | expected ✓ | expected like the SC5 Pro II | expected like the SC5 Pro II | only with "allow untested models" |
+| **Other models** | – | probe only | – | – | – |
+
+On the SC Box and HS Box the app sets the clock only, from half of stock up to stock (SC Box 725 MHz, HS Box
+850 MHz) in 25 MHz steps; a tuning step may try stock + 25 MHz, but presets and the clock a run ends on stay at
+stock or below. Their fans follow the firmware's own fan target.
 
 ## Screenshots
 
@@ -29,6 +49,7 @@ StartOS's service listing has no screenshot gallery, so they're here. Test miner
 
 ## Table of Contents
 
+- [Supported Miners](#supported-miners)
 - [Screenshots](#screenshots)
 - [Image and Container Runtime](#image-and-container-runtime)
 - [Volume and Data Layout](#volume-and-data-layout)

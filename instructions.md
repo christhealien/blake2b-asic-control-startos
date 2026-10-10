@@ -26,8 +26,9 @@ Your miners must be on a network your StartOS server can reach. Keep them on a t
 - **Fleet:** every miner with its hashrate, temperatures, fans, a 24-hour hashrate graph, best share and rejected shares; tick miners to apply a preset, pause the schedule or restart them.
 - **Profiles:** presets (clock, voltage, PV and their own fan curve), the shared fan curves, and **Download report**: a read-only zip, with nothing private in it, to send in when you have a model or firmware the app hasn't been tested on.
 - **Schedule:** paint a week of presets in half-hour blocks, add scheduled restarts, and copy one miner's week to others.
-- **Miner page, SC Box and HS Box:** clock and voltage are read only, but the fan panel sets the **fan target** the firmware's own fan loop holds (SC Box 65–75 °C, HS Box 70–80 °C). Lower is cooler and louder, higher quieter and warmer.
-- **Tuner** (SC Lite): maps every clock from underclock to overclock, finds the lowest clean voltage at each, and builds High, Middle, Low and Lowest-power presets.
+- **Miner page, SC Box and HS Box:** the clock panel sets the **clock** (only the clock: the voltage stays as the miner has it; never above stock), and the fan panel sets the **fan target** the firmware's own fan loop holds (SC Box 65–75 °C, HS Box 70–80 °C). Lower is cooler and louder, higher quieter and warmer.
+- **Profiles, SC Box and HS Box:** presets are clocks; **Make four from its clock** makes High, Middle, Low and Lowest power 25 MHz apart.
+- **Tuner** (SC Lite): maps every clock from underclock to overclock, finds the lowest clean voltage at each, and builds High, Middle, Low and Lowest-power presets. **SC Box and HS Box:** a clock tuner steps the clock up 25 MHz at a time until a step isn't clean, then builds and tests four clock presets. These runs are new on those models: watch the first steps.
 - **Settings:** miners, notifications (Telegram or Discord), time zone, **Best share numbers** (on the same scale as DATUM and mempool, the miner's own numbers, or both), and **Account** to change your username or password.
 
 To replace a lost password, stop the service, run **Set Login Password** again (everyone is signed out), and start it.
