@@ -24,6 +24,7 @@ Your miners must be on a network your StartOS server can reach. Keep them on a t
 ## Using it
 
 - **Fleet:** every miner with its hashrate, temperatures, fans, a 24-hour hashrate graph, best share and rejected shares; tick miners to apply a preset, pause the schedule or restart them.
+- **Pools:** tick the miners on the page (the same ticks as on Fleet), see each one's pools and the one it mines on, switch or remove a pool per miner, add a pool to all the ticked miners (each keeps its worker name), or switch them all to one pool.
 - **Profiles:** presets (clock, voltage, PV and their own fan curve), the shared fan curves, and **Download report**: a read-only zip, with nothing private in it, to send in when you have a model or firmware the app hasn't been tested on.
 - **Schedule:** paint a week of presets in half-hour blocks, add scheduled restarts, and copy one miner's week to others.
 - **Miner page, SC Box and HS Box:** the clock panel sets the **clock** (only the clock: the voltage stays as the miner has it; never above stock), and the fan panel sets the **fan target** the firmware's own fan loop holds (SC Box 65–75 °C, HS Box 70–80 °C). Lower is cooler and louder, higher quieter and warmer.
