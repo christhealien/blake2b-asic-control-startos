@@ -14,7 +14,7 @@ export const manifest = setupManifest({
   images: {
     app: {
       source: {
-        dockerTag: 'ghcr.io/christhealien/blake2b-asic-control:1.18.1',
+        dockerTag: 'ghcr.io/christhealien/blake2b-asic-control:1.18.2',
       },
       arch: ['x86_64', 'aarch64'],
     },
