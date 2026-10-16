@@ -91,7 +91,7 @@ One volume holds everything the app writes.
 
 | Volume | Mount Point | Purpose |
 | ------ | ----------- | ------- |
-| `main` | `/data`     | `miners.json` (miners, their admin passwords, presets, schedules, settings), `auth.json` (the login: username and salted PBKDF2 hash), `sessions.json` (hashed session tokens), `best_shares.json`, `hashrate.json`, `rejects.json`, `restart_times.json`, and `tuner/` (one folder per miner with the tuner's logs, CSVs, plan and presets) |
+| `main` | `/data`     | `miners.json` (miners, their admin passwords, presets, schedules, settings), `auth.json` (the login: username and salted PBKDF2 hash), `sessions.json` (hashed session tokens), `best_shares.json`, `hashrate.json`, `rejects.json`, `restart_times.json`, `logs/` (the app's own logs, kept under about 2 MB each; Settings → App logs downloads them with private details taken out), and `tuner/` (one folder per miner with the tuner's logs, CSVs, plan and presets) |
 
 A `chown` oneshot runs as root on every start (`chown -R 1000:1000 /data`), because StartOS mounts volumes owned by root and the app runs as user 1000. The app keeps its files owner-only (mode 600; `tuner/` 700).
 
