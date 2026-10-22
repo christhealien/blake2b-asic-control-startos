@@ -15,4 +15,4 @@ jobs:
     if: github.event.changes.base && github.event.pull_request.draft == false
     permissions:
       contents: read
-    uses: Start9Labs/start-technologies/.github/workflows/build.yml@master
+    uses: ./.github/workflows/s9-build.yml   # Start9's build workflow, run on ubuntu-24.04 (see that file)

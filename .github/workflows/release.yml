@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    uses: Start9Labs/start-technologies/.github/workflows/release.yml@master
+    uses: ./.github/workflows/s9-release.yml   # Start9's release workflow, run on ubuntu-24.04 (see that file)
     with:
       RELEASE_REGISTRY: ${{ vars.RELEASE_REGISTRY }}
       S3_S9PKS_BASE_URL: ${{ vars.S3_S9PKS_BASE_URL }}
