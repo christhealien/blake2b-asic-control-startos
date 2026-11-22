@@ -1,3 +1,5 @@
+> **This project is retired and archived.** It is no longer maintained, and it has been removed from the christhealien Umbrel store. No further updates or security fixes will be published.
+
 <p align="center">
   <img src="icon.svg" alt="Blake2b ASIC Control logo" width="21%">
 </p>
